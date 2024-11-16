@@ -6,13 +6,13 @@ import requests
 app = Flask(__name__)
 
 #EXTERNAL_API_URL = "http://localhost:5001/generate"  # The URL for the local server API
-EXTERNAL_API_URL = "https://fakeworld-1-qhlr.onrender.com"  # The URL for the external API
+EXTERNAL_API_URL = "https://fakeworldapi.onrender.com"  # The URL for the external API
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/generate', methods=['POST'])
+@app.route('/generate', methods=['POST','GET'])
 def generate():
     file = request.files['file']
     
