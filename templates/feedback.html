@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake World</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='icon/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="form-container">
+            <h1>We value Your Feedback</h1>
+            <form id="feedback-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" required></textarea><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="info-container">
+            <h2>Information</h2>
+            <p>
+                We engage in feedback to drive growth, enhance performance, and foster meaningful improvement. Feedback
+                provides critical insights into what is effective and what requires adjustment, offering a clear pathway
+                for refinement. It allows individuals and organizations to pinpoint strengths and address areas needing
+                development. By promoting a culture of open communication, feedback builds trust, aligns goals, and
+                boosts collaboration. Constructive input encourages innovation, adaptability, and informed
+                decision-making, ensuring continuous learning and excellence. Whether positive reinforcement or
+                constructive criticism, feedback empowers people to reach their full potential, making it an
+                indispensable tool in achieving lasting success and high-quality outcomes.</p>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <p>Contact us at <a href="mailto:contact@example.com">contact@glau.com</a> for any inquiries.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/feedback.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake World</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='icon/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FakeWorld.<sub>in</sub></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#generate">Generate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('feedback') }}">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-img">
+        <div id="typewriter">
+        </div>
+    </div>
+    <div class="grid">
+        <div>
+            <h2>Data Importance</h2>
+            <p>Data is a fundamental asset in today's world, driving innovation, decision-making, and efficiency across
+                virtually every industry. The importance of data cannot be overstated, as it shapes the way businesses
+                operate, how governments make policies, and how individuals interact with technology. At its core, data
+                provides the insights and information needed to make informed decisions, rather than relying on
+                intuition or guesswork. In business, for instance, data is pivotal in understanding customer
+                preferences, market trends, and operational performance. Companies collect vast amounts of data through
+                customer interactions, transactions, and social media to create targeted marketing campaigns, improve
+                customer service, and streamline operations. By leveraging data analytics, businesses can identify new
+                opportunities, predict future trends, and gain a competitive edge in a rapidly changing market.
+
+                Moreover, data is at the heart of technological advancements, particularly in fields such as artificial
+                intelligence (AI) and machine learning. These technologies rely heavily on large datasets to train
+                algorithms and improve performance. AI-powered applications, from virtual assistants like Siri to
+                recommendation engines on platforms like Netflix and Amazon, depend on data to learn and adapt to user
+                preferences. Data enables machines to recognize patterns, make predictions, and automate complex tasks,
+                ultimately enhancing the way we interact with technology. In sectors like healthcare, data is
+                revolutionizing diagnostics, treatment plans, and patient care. Medical professionals now have access to
+                vast amounts of patient data, genetic information, and medical research that allow for personalized
+                treatments and early detection of diseases, improving patient outcomes and reducing costs.
+
+                In addition to driving innovation, data plays a crucial role in improving efficiency and productivity.
+                Organizations use data to optimize workflows, automate processes, and reduce human error. For example,
+                in manufacturing, the Internet of Things (IoT) enables sensors to collect real-time data on equipment
+                performance, allowing for predictive maintenance and reducing downtime. Similarly, businesses use data
+                to streamline supply chains, manage inventory, and forecast demand more accurately, leading to cost
+                savings and better resource allocation. The ability to analyze data quickly and accurately allows
+                companies to respond faster to market changes and customer needs, giving them a significant advantage in
+                a competitive environment..</p>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-4" id="generate">
+        <div class="text-center">
+            <h2>Data Generator</h2>
+            <p>Upload a CSV file to generate synthetic data based on it.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <input type="file" name="file" class="form-control" accept=".csv" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Generate Data</button>
+                </form>
+                <div id="message" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="last">
+        <div class="container">Privacy Concerns: Data, especially personal and sensitive information, can be exploited
+            if not protected adequately. Data breaches and unauthorized access to private data can have devastating
+            consequences for individuals and organizations. Personal data—such as health records, financial information,
+            and location data—can be misused by malicious actors for identity theft, fraud, or blackmail. Organizations
+            that collect and store user data must take stringent measures to safeguard privacy, comply with data
+            protection regulations (e.g., GDPR, CCPA), and be transparent about how data is used.</div>
+        <div class="links-container">
+            <h2>Importants Links</h2>
+            <ul>
+                <li><a href="https://www.kaggle.com" target="_blank">kaggle</a></li>
+                <li><a href="https://www.github.com" target="_blank">Github</a></li>
+                <li><a href="#" target="_blank">Example</a></li>
+                <li><a href="#" target="_blank">Example</a></li>
+                <li><a href="#" target="_blank">Example</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 FakeWorld.in. All rights reserved.</p>
+        <p>Author: GLAU</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
