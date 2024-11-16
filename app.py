@@ -56,7 +56,7 @@ def download(filename):
 def home():
     return render_template('index.html')
 
-@app.route('/feedback')
+'''@app.route('/feedback')
 def feedback():
     return render_template('feedback.html')
 
@@ -86,7 +86,7 @@ def submit_feedback():
 
 @app.route('/blogs')
 def blogs():
-    return render_template('blogs.html')
+    return render_template('blogs.html')'''
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
